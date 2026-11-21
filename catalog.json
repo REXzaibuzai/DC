@@ -1,0 +1,67 @@
+{
+ "schema": 2,
+ "components": [
+  {
+   "id": "green_light_alert",
+   "kind": "app",
+   "version": "0.2.6",
+   "title": "绿灯起步提醒",
+   "description": "看 KAFAS 原始红绿灯通道,红变绿后全屏提示并响铃。中文界面,含三目通道探测与速度门槛可调",
+   "mguHmi": [
+    "ID7"
+   ],
+   "uninstallable": true,
+   "requires": {
+    "idrive7-renderd": "2.1.7",
+    "mgu-inputgate": "1.0.0"
+   },
+   "artifact": {
+    "name": "green_light_alert@0.2.6.tgz",
+    "size": 1280881,
+    "sha256": "bf22e5bd6f7e10ef1853fa5a0b1390a522ceba0664ca459295bfc292d4d773be",
+    "url": "green_light_alert@0.2.6.tgz"
+   }
+  },
+  {
+   "id": "env_probe",
+   "kind": "app",
+   "version": "0.2.5",
+   "title": "环境模型探测",
+   "description": "只读扫描设备 SOME/IP 服务目录;手机扫码下载报告;新增「结构」页,可把车道/目标物接口定义导进报告",
+   "mguHmi": [
+    "ID7"
+   ],
+   "uninstallable": true,
+   "requires": {
+    "idrive7-renderd": "2.1.7",
+    "mgu-inputgate": "1.0.0"
+   },
+   "artifact": {
+    "name": "env_probe@0.2.5.tgz",
+    "size": 1325483,
+    "sha256": "594cd69cb284c3b88846bb4a4262a385cbf7d4daa98a9953157ebd2da3d3ee68",
+    "url": "env_probe@0.2.5.tgz"
+   }
+  },
+  {
+   "id": "env-probe-share",
+   "kind": "tool",
+   "version": "1.0.0",
+   "title": "环境探测报告分享",
+   "description": "系统级分享服务:手机上打开车机页面下载环境模型探测报告,和 CarPlay 仪表地图日志一样",
+   "mguHmi": [
+    "ID7"
+   ],
+   "uninstallable": true,
+   "requires": {
+    "mgu-deploy": "0.7.0"
+   },
+   "artifact": {
+    "name": "env-probe-share@1.0.0.tgz",
+    "size": 3518,
+    "sha256": "a31816ff4ec6f4b53f3053b80df30dc0fc49cfbc50754452b20ffa72427e1a18",
+    "url": "env-probe-share@1.0.0.tgz"
+   }
+  }
+ ]
+}

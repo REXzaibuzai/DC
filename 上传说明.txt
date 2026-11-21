@@ -1,0 +1,34 @@
+GitHub 源(release 版)上传说明
+================================
+
+一、发一个 Release（这是关键,做错了商店取不到)
+
+1. 仓库页面右侧 Releases -> "Draft a new release"
+2. Tag 处**手动填**  catalog        <- 必须一字不差,就叫 catalog
+   (下面的 Target 选 main 即可)
+3. Release title 随便写,比如: 环境探测+绿灯提醒 源
+4. 把本文件夹里这 4 个文件作为附件(Attach binaries)全部上传:
+      catalog.json
+      env_probe@0.2.5.tgz
+      green_light_alert@0.2.6.tgz
+      env-probe-share@1.0.0.tgz
+5. 点 Publish release
+
+注意:附件名不能改。名字、大小、sha256 三者对不上,商店会直接报
+     "download does not match the catalog"。
+
+二、车上加源
+
+商店 -> 源 -> 添加源:
+    类型    github
+    仓库    你的用户名/仓库名
+    通道    releases
+成功后列表里会出现三个组件:
+     环境模型探测 0.2.5
+     绿灯起步提醒 0.2.6
+     环境探测报告分享 1.0.0   (系统组件,装完重启一次车机)
+
+三、以后更新
+
+改版本号后重新构建,把新 tgz + 改过的 catalog.json 传到**同一个** releases 页面
+(编辑 release,删掉旧附件、传新的),商店里就会显示"可更新"。
